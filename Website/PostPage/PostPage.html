@@ -1,0 +1,48 @@
+
+<html>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <title>House Finder Post</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  </head>
+  <body onload="event.preventDefault(); checkUsername()">
+    <div class="container">
+        <h1 id="header">Create New Listing</h1>
+        <form onsubmit="event.preventDefault(); post()" id="form">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" class="box" required><br>
+
+            <label for="address">Street Address:</label><br>
+            <input type="text" id="address" name="address" class="box" required><br>
+
+            <label for="zip">Zipcode:</label><br>
+            <input type="text" id="zip" name="zip" class="box" required><br>
+
+            <label for="price">Price(Per Month):</label><br>
+            <input type="number" id="price" name="price" class="box" required><br>
+
+            <label for="distance">Distance(From CPP in Miles):</label><br>
+            <input type="number" id="distance" name="distance" class="box" required><br>
+
+            <label for="contact">Contact Information:</label><br>
+            <input type="text" id="contact" name="contact" class="box" required><br>
+
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" required class="text-box"></textarea><br>
+
+            <label for="main-image">Main Image:</label><br>
+            <input type="file" id="main-image" name="main-image" accept="image/*" required><br><br>
+
+            <!-- <label for="additional-images">Additional Images:</label><br>
+            <input type="file" id="additional-images" name="additional-images" multiple required><br> -->
+
+            <input type="submit" value="Submit" id="submit-button">
+            <div id="input-field-button">
+              <input type="button" id="back" value="Back" onclick="backButton()" >
+          </div>
+        </form>
+    </div>
+  </body>
+
+  <script id="post" src="./post.js"></script>
+</html>

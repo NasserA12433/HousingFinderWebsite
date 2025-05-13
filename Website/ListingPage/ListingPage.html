@@ -1,0 +1,46 @@
+<html>
+  <!--Load CSS file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <title>House Finder</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  </head>
+  <body onload="event.preventDefault(); loadTiles('','','',false,'test@cpp.edu'); userCheck()">
+    <!--Top Bar-->
+    <div class="topbar" id="topbar">
+      <img src="Images/logo.png" class="topbar-img">
+      <div id="search">
+        <form onsubmit="event.preventDefault(); search()">
+          <input type="text" placeholder="Search" id="search-input" class="search-box">
+        </form>
+      </div>
+      <a href="../LoginPage/LoginPage.html" id="login-button">Login</a>
+    </div>
+
+    <div class="filters-listings-container">
+      <div class="filters">
+        <h1 style="text-align: center;">
+          Filters
+        </h1>
+        <form onsubmit="event.preventDefault(); filter()" class="filters-form">
+          <input type="text" placeholder="Keywords" id="keywords" class="input-box"><br>
+          <input type="text" placeholder="Maximum Price" id="price" class="input-box"><br>
+          <input type="text" placeholder="Maximum Distance" id="distance" class="input-box"><br>
+          
+          <div id="my-listings">
+            <input type="checkbox" id="my-listings-check" name="my-listings-check">
+            <label id="my-listings-label" for="my-listings-check">My listings</label><br>
+          </div>
+          <input type="submit" value="Submit" id="submit-filter">
+        </form>
+      </div>
+      <div class="tile-container">
+      </div>
+    </div>
+
+  </body>
+
+  <!--Load JS file, add more here when needed -->
+  <!-- <script src="./CreateListingTiles.js"></script> -->
+  <script src="LoadTiles.js"></script>
+</html>
